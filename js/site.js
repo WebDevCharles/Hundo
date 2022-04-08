@@ -16,7 +16,7 @@ function displayValues(start, end) {
         if (i % 2 == 0) {
             item.classList.add("boldItem");
         } else {
-            item.classList.add("redItem")
+            item.classList.add("redItem");
         }
 
         item.classList.add("list-group-item");
