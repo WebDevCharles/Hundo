@@ -1,27 +1,26 @@
-// Get Information - Step One
-function getMessage() {
+function getValues() {
 
-    let msg = document.getElementById("txtMessage").value;
-    displayMessage(msg);
+    let startValue = document.getElementById("startValue").value;
+    let endValue = document.getElementById("endValue").value;
+    displayValues(startValue, endValue);
 
 }
 
-// Final Step - View
-function displayMessage(message) {
+function displayValues(start, end) {
 
-    // First get the "ol" element from the page
     element = document.getElementById("results");
+    for (let i = start; i <= end; i++) {
 
-    // Create a new "li" element
-    let item = document.createElement("li");
+        let item = document.createElement("li");
 
-    // Add classes to the "li" element
-    item.classList.add("list-group-item");
+        if (i % 2 == 0) {
+            item.classList.add("boldItem");
+        } else {
+            item.classList.add("redItem")
+        }
 
-    // Set classes to the "li" element
-    item.innerHTML = message;
-
-    // Add the new items to the list
-    element.appendChild(item) = item;
-
+        item.classList.add("list-group-item");
+        item.innerHTML = i;
+        element.appendChild(item);
+    }
 }
