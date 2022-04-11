@@ -67,38 +67,41 @@
                 <div class="col-12 col-lg-8">
                     <pre class="line-numbers">
                         <code class="language-javascript">
-                            function getMessage() {
-                                let msg = document.getElementById("txtMessage").value;
-                                displayMessage(msg);
+                            function getValues() {
+
+                                let startValue = document.getElementById("startValue").value;
+                                let endValue = document.getElementById("endValue").value;
+                                displayValues(startValue, endValue);
+                            
                             }
                             
-                            // Final Step - View
-                            function displayMessage(message) {
+                            function displayValues(start, end) {
                             
-                                // First get the "ol" element from the page
                                 element = document.getElementById("results");
+                                for (let i = start; i <= end; i++) {
                             
-                                // Create a new "li" element
-                                let item = document.createElement("li");
+                                    let item = document.createElement("div");
                             
-                                // Add classes to the "li" element
-                                item.classList.add("list-group-item");
+                                    if (i % 2 == 0) {
+                                        item.classList.add("boldItem");
+                                    } else {
+                                        item.classList.add("redItem");
+                                    }
                             
-                                // Set classes to the "li" element
-                                item.innerHTML = message;
-                            
-                                // Add the new items to the list
-                                element.appendChild(item) = item;
+                                    item.classList.add("col");
+                                    item.innerHTML = i;
+                                    element.appendChild(item);
+                                }
                             }
                         </code>
                     </pre>
                 </div>
                 <div class="col-12 col-lg-4">
                     <p class="mb-5"><b>The code is structured in two functions.</b></p>
-                    <h5>getMessage</h5>
-                    <p>"Gets" values from the user.</p>
-                    <h5>displayMessage</h5>
-                    <p>"Displays" the items on the page.</p>
+                    <h5>getValues</h5>
+                    <p>"Gets" custom starting and ending values from the user.</p>
+                    <h5>displayValues</h5>
+                    <p>"Displays" the even numbers in bold font-weight and the odd results in red.</p>
                 </div>
             </div>
         </div>

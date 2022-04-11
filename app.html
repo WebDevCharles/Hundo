@@ -59,28 +59,54 @@
         </div>
     </nav>
 
-    <main class="flex-shrink-0">
-        <div class="container mt-5">
-            <h1>HUNDO:</h1>
-            <p>Prints numbers from 1 to 100. Bolds the "even" numbers.</p>
-            <div class="row">
-                <div class="col">
-                    <label class="form-label" for="startValue">Enter A Start Value</label>
-                    <input class="form-control" type="number" id="startValue" value="10">
+    <section class="flex-shrink-0 py-5">
+        <div class="container px-5 my-5">
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col border-right">
+                    <h1 class="fw-bolder">
+                        HUNDO: A Coding Challenge
+                    </h1>
+                    <hr>
+                    <p class="mb-4">
+                        A JavaScript coding challenge that focuses on looping.
+                        A program that displays numbers from 1 to 100;
+                        Displaying even numbers in <b>BOLD</b>.
+                    </p>
+                    <h3>Instructions:</h3>
+                    <hr>
+                    <p>
+                        Enter a custom starting and ending value.
+                        Results will print in a table.
+                    </p>
                 </div>
-                <div class="col">
-                    <label class="form-label" for="startValue">Enter An End Value</label>
-                    <input class="form-control" type="number" id="endValue" value="10">
+                <div class="col mb-5">
+                    <h3>Enter Custom Values:</h3>
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <input id="startValue" type="number" class="form-control" placeholder="Start Value"
+                                    value="1" aria-label="Start Value">
+                            </div>
+                            <div class="col">
+                                <input id="endValue" type="number" class="form-control" placeholder="End Value"
+                                    value="100" aria-label="End Value">
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-center mt-3">
+                                <button id="btnSubmit" type="button" class="btn btn-dark">Hundo! (Click Me)</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h3>Results:</h3>
+                    <hr>
+                    <div class="messageStyle mt-5">
+                        <div id="results" class="row row-cols-5 row-cols-md-10">
+                            <!-- Results Go Here -->
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <button id="btnSubmit" class="btn btn-primary mt-2">Start!</button>
-            <div class="messageStyle mt-5">
-                <ol id="results" class="list-group">
-
-                </ol>
             </div>
         </div>
-    </main>
+    </section>
     <footer class="footer mt-auto py-3 bg-black sticky-footer">
         <div class="container-fluid">
             <div class="row row-cols-1 row-cols-lg-3 gy-2">

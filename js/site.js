@@ -11,7 +11,7 @@ function displayValues(start, end) {
     element = document.getElementById("results");
     for (let i = start; i <= end; i++) {
 
-        let item = document.createElement("li");
+        let item = document.createElement("div");
 
         if (i % 2 == 0) {
             item.classList.add("boldItem");
@@ -19,7 +19,7 @@ function displayValues(start, end) {
             item.classList.add("redItem");
         }
 
-        item.classList.add("list-group-item");
+        item.classList.add("col");
         item.innerHTML = i;
         element.appendChild(item);
     }

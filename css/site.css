@@ -43,10 +43,11 @@ main>.container {
 }
 
 .checklist i {
-    color: var(--ch-secondary-color);
+    color: var(--ch-primary-color);
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 
 .messageStyle {
     font-size: 1.5rem;
@@ -58,4 +59,10 @@ main>.container {
 
 .redItem {
     color: red;
+}
+
+@media (min-width: 767.98px) {
+    .border-right {
+        border-right: 1px solid lightgrey;
+    }
 }
