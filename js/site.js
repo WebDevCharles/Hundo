@@ -24,3 +24,8 @@ function displayValues(start, end) {
         element.appendChild(item);
     }
 }
+
+function clearOutput() {
+    let output = document.getElementById("results");
+    output.innerHTML = "";
+}
